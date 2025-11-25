@@ -7,9 +7,12 @@ with open('datas/lr_model.pkl', 'rb') as f:
 with open('datas/tfidf_vectorizer.pkl', 'rb') as f:
     loaded_vectorizer = pickle.load(f)
 
-new_raw_email = "Claim your free $1,000 gift card immediately by clicking this link."
-new_emails = [new_raw_email]
-print(f"郵件內容: {new_raw_email}")
+mailpath = "datas/data.txt"
+with open(mailpath, 'r', encoding='utf-8') as file:
+    new_raw_mail = file.read()
+
+new_emails = [new_raw_mail]
+print(f"郵件內容: {new_raw_mail}")
 
 print("-------傳統 Filter-------")
 

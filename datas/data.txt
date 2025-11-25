@@ -1,0 +1,25 @@
+"Dear User,
+
+We are writing to notify you that an unusual sign-in attempt was recently detected on your account from an unrecognized device and location:
+
+Attempted Login Location: Russia, Moscow
+
+Attempted Login Date/Time: Nov 25, 2025, 1:15 AM (EST)
+
+Device: Linux/Unknown Browser
+
+If this was you, please disregard this email.
+
+If this was NOT you, your account security may be compromised. To immediately secure your account and prevent any unauthorized activity, you MUST click the link below to verify your identity and change your password:
+
+[Hyperlink to a fraudulent "Security Verification Portal" - e.g., https://security-verify-portal.io/reset]
+
+Failure to verify your identity within 6 hours will result in a temporary LOCKOUT to protect your personal information.
+
+We take your security seriously. Please act immediately.
+
+Sincerely,
+
+The Account Security Response Team
+
+Note: For security reasons, replying to this email is disabled."
