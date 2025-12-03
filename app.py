@@ -26,7 +26,7 @@ try:
 
     print("AI 模型與向量化器載入成功。")
 except FileNotFoundError:
-    print("Eooro：找不到 .pkl 檔案，請確認檔案位置。")
+    print("Error：找不到 .pkl 檔案，請確認檔案位置。")
     MODEL = None
     VECTORIZER = None
     
@@ -96,10 +96,7 @@ def dual_predict(email_text):
 
     return ai_status_md, ai_confidence, traditional_output_md
 
-
-# ===============================================
-# 步驟 3: 建構 UI 介面
-# ===============================================
+# 建構 UI 介面
 
 with gr.Blocks(title="AI 郵件防護演示") as demo:
     
@@ -112,7 +109,7 @@ with gr.Blocks(title="AI 郵件防護演示") as demo:
     )
     
     with gr.Row():
-        # 左側：輸入區
+        # 輸入區
         with gr.Column(scale=1):
             input_text = gr.Textbox(
                 lines=12, 
@@ -121,7 +118,7 @@ with gr.Blocks(title="AI 郵件防護演示") as demo:
             )
             submit_btn = gr.Button("🔍 開始偵測", variant="primary")
             
-            # 範例
+            # Example
             gr.Examples(
                 examples=[
                     ["Congratulations! You have won a free iPhone. Click here to claim your prize now!"],
@@ -131,17 +128,17 @@ with gr.Blocks(title="AI 郵件防護演示") as demo:
                 label="快速測試範例"
             )
 
-        # 右側：結果區
+        # 結果區
         with gr.Column(scale=1):
             gr.Markdown("### 📊 偵測結果分析")
             
-            # 1. AI 模型區塊
+            # AI 模型區塊
             with gr.Group():
                 gr.Markdown("#### 🤖 AI Model")
                 output_ai_status = gr.Markdown() # 這裡會顯示大字體的 HTML
                 output_ai_confidence = gr.Textbox(label="信心指標", show_label=False)
             
-            # 2. 傳統過濾器區塊
+            # 傳統過濾器區塊
             with gr.Group():
                 gr.Markdown("#### 📜 傳統過濾器")
                 output_traditional = gr.Markdown() # 這裡會顯示大字體的 HTML
